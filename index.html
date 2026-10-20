@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aster — Freelance Product Design & Frontend</title>
+    <meta
+      name="description"
+      content="Aster is a freelance studio for product design and frontend development. Sample portfolio for Maya Chen."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#work">Skip to work</a>
+
+    <header class="site-header" data-header>
+      <a class="logo" href="#top" aria-label="Aster home">Aster</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Hire me</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <div class="mobile-nav" data-mobile-nav hidden>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Hire me</a>
+    </div>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-brand">
+        <div class="hero-copy">
+          <p class="brand" id="hero-brand">Aster</p>
+          <h1>Interfaces that feel inevitable.</h1>
+          <p class="lede">
+            Freelance product design and frontend for startups ready to look as sharp as they ship.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Start a project</a>
+            <a class="btn btn-ghost" href="#work">See selected work</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1800&q=80"
+            alt=""
+            width="1800"
+            height="1200"
+          />
+        </div>
+      </section>
+
+      <section class="section work" id="work" aria-labelledby="work-heading">
+        <div class="section-intro">
+          <h2 id="work-heading">Selected work</h2>
+          <p>Recent product and brand engagements for teams shipping in public.</p>
+        </div>
+
+        <article class="project project-featured reveal">
+          <a class="project-media" href="#contact">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80"
+              alt="Analytics dashboard on a laptop"
+              width="1600"
+              height="1000"
+            />
+          </a>
+          <div class="project-copy">
+            <p class="project-meta">Product design · SaaS</p>
+            <h3>Northwind Analytics</h3>
+            <p>
+              Rebuilt the reporting experience so operators find answers in two clicks instead of twenty.
+            </p>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="project reveal">
+            <a class="project-media" href="#contact">
+              <img
+                src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=80"
+                alt="Mobile app screens on a desk"
+                width="1200"
+                height="900"
+              />
+            </a>
+            <div class="project-copy">
+              <p class="project-meta">Brand + UI · Fintech</p>
+              <h3>Ledgerly</h3>
+              <p>A calm visual system for a spending app that used to feel noisy.</p>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <a class="project-media" href="#contact">
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c8199c727adb?auto=format&fit=crop&w=1200&q=80"
+                alt="Code and design tools on a workstation"
+                width="1200"
+                height="900"
+              />
+            </a>
+            <div class="project-copy">
+              <p class="project-meta">Frontend · Design system</p>
+              <h3>Harbor Components</h3>
+              <p>Accessible React components with documentation the whole team actually uses.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section services" id="services" aria-labelledby="services-heading">
+        <div class="section-intro">
+          <h2 id="services-heading">How I help</h2>
+          <p>One focused engagement at a time — from first sketch to production-ready UI.</p>
+        </div>
+        <ul class="service-list">
+          <li class="reveal">
+            <h3>Product design</h3>
+            <p>Flows, wireframes, and polished UI for web products that need clarity under pressure.</p>
+          </li>
+          <li class="reveal">
+            <h3>Frontend build</h3>
+            <p>Responsive interfaces in React or plain HTML — clean, accessible, and ready to hand off.</p>
+          </li>
+          <li class="reveal">
+            <h3>Design systems</h3>
+            <p>Tokens, components, and docs so your product stays consistent as the team grows.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-heading">
+        <div class="about-layout">
+          <div class="about-visual reveal">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80"
+              alt="Portrait of a professional woman in a bright studio"
+              width="1000"
+              height="1250"
+            />
+          </div>
+          <div class="about-copy">
+            <h2 id="about-heading">About Maya</h2>
+            <p>
+              I’m Maya Chen, the designer and developer behind Aster. I partner with early-stage teams who
+              need a senior pair of hands without a full-time hire.
+            </p>
+            <p>
+              Based in Portland, working with clients across the US and Europe. Typical projects run 4–10
+              weeks with clear milestones and async-friendly communication.
+            </p>
+            <dl class="about-facts">
+              <div>
+                <dt>Availability</dt>
+                <dd>Open for Q2 2026</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>SaaS · fintech · creator tools</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-heading">
+        <div class="contact-panel reveal">
+          <div class="section-intro">
+            <h2 id="contact-heading">Let’s build something sharp</h2>
+            <p>Tell me about the product, the timeline, and what “done” looks like.</p>
+          </div>
+          <form class="contact-form" data-contact-form>
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" required placeholder="Alex Morgan" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required placeholder="alex@company.com" />
+            </label>
+            <label class="full">
+              <span>Project details</span>
+              <textarea
+                name="message"
+                rows="5"
+                required
+                placeholder="What are you building, and when do you need it?"
+              ></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <p class="form-note" data-form-note role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand">Aster</p>
+      <p>Sample freelance portfolio · Replace with your name, work, and contact details.</p>
+      <div class="footer-links">
+        <a href="mailto:hello@aster.studio">hello@aster.studio</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://dribbble.com" target="_blank" rel="noreferrer">Dribbble</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
