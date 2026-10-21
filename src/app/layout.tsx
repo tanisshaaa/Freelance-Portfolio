@@ -26,11 +26,11 @@ const body = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Tanisha Sinha — AI/ML Engineer · LLMs, RAG & AI Agents",
+  title: "Tanisha | Freelance Portfolio",
   description:
     "Freelance AI/ML engineer and team leader. I build LLM apps, RAG pipelines, AI agents, and full-stack products for education, recruitment, and business intelligence.",
   openGraph: {
-    title: "Tanisha Sinha — Freelance AI/ML Engineer",
+    title: "Tanisha | Freelance Portfolio",
     description:
       "LLMs, RAG, AI agents, and practical AI products. Open to freelance AI, web, and app projects.",
     type: "website",

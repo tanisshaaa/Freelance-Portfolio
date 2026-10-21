@@ -10,6 +10,7 @@ import {
   useSpring,
 } from "framer-motion";
 import { Asterisk } from "./Stickers";
+import { TitleMarquee } from "./TitleMarquee";
 import { EASE, LOAD_DELAY } from "@/lib/motion";
 
 /**
@@ -32,6 +33,7 @@ export function SmoothProvider({ children }: { children: ReactNode }) {
 
   return (
     <MotionConfig reducedMotion="user">
+      <TitleMarquee />
       <motion.div
         className="scroll-progress"
         style={{ scaleX: progress }}

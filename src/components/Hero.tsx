@@ -70,16 +70,6 @@ export function Hero() {
           <AsterFlower />
         </motion.div>
       </Parallax>
-      <Parallax mx={mx} my={my} depth={80} className="hero__sticker hero__sticker--burst">
-        <motion.div
-          animate={{ rotate: [-8, 8, -8], scale: [1, 1.06, 1] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <Burst />
-          <span className="hero__burst-text label">Open for
-            <br />projects</span>
-        </motion.div>
-      </Parallax>
       <Parallax mx={mx} my={my} depth={40} className="hero__sticker hero__sticker--sparkle">
         <motion.div
           animate={{ scale: [1, 1.25, 1], rotate: [0, 20, 0] }}
@@ -124,6 +114,27 @@ export function Hero() {
               </motion.span>
             ))}
           </h1>
+
+          <motion.div
+            className="hero__burst"
+            aria-hidden="true"
+            initial={{ opacity: 0, scale: 0.4, rotate: -20 }}
+            animate={{ opacity: 1, scale: 1, rotate: -8 }}
+            transition={{ ...POP, delay: LOAD_DELAY + 0.85 }}
+          >
+            <motion.div
+              animate={{ rotate: [-8, 4, -8], scale: [1, 1.05, 1] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Burst />
+              <span className="hero__burst-text label">
+                Open for
+                <br />
+                projects
+              </span>
+            </motion.div>
+          </motion.div>
+
           <motion.span
             className="hero__tm"
             initial={{ scale: 0, rotate: -90 }}
