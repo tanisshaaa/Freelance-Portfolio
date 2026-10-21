@@ -1,20 +1,23 @@
-# Aster — Sample Freelance Portfolio
+# Tanisha Sinha — Freelance AI Portfolio
 
-A clean, brand-first sample portfolio for a freelance product designer & frontend developer.
+Creative, motion-forward freelance portfolio for **Tanisha Sinha** — AI/ML Engineer & Team Leader (LLMs, RAG, AI agents). Built with Next.js.
 
-## Open it
-
-Double-click `index.html`, or from this folder run:
+## Run locally
 
 ```bash
-npx --yes serve .
+npm install
+npm run dev
 ```
 
-Then open the local URL shown in the terminal (usually `http://localhost:3000`).
+Open [http://localhost:3000](http://localhost:3000).
 
-## Customize
+## Your details live in
 
-1. Replace **Aster** / **Maya Chen** with your name and brand.
-2. Swap Unsplash images for your own project screenshots.
-3. Update services, about copy, and the contact email in the footer.
-4. Hook the contact form to Formspree, Getform, or your backend.
+- `src/lib/site.ts` — name, email, GitHub, LinkedIn
+- `src/components/WorkGrid.tsx` — projects (RetailGPT, OrbitHyre, Predictive Maintenance)
+- `src/components/Experience.tsx` — roles & education
+- `src/components/Nutshell.tsx` — about + skills marquee
+
+## Stack
+
+Next.js 15 · TypeScript · Framer Motion · GSAP · next/font
