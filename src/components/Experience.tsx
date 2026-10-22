@@ -15,8 +15,8 @@ import { unsplash } from "@/lib/site";
 
 const ENTRIES = [
   {
-    date: "Jul 2026 – Present",
-    title: "Team Leader · 4th Orbit",
+    date: "Jul 2026 to Present",
+    title: "Team Leader at 4th Orbit",
     tag: "Leadership",
     read: "Remote",
     detail:
@@ -25,18 +25,18 @@ const ENTRIES = [
     alt: "Team collaborating in a modern workspace",
   },
   {
-    date: "Jul 2025 – Jul 2026",
-    title: "AI/ML Engineer · 4th Orbit",
+    date: "Jul 2025 to Jul 2026",
+    title: "AI/ML Engineer at 4th Orbit",
     tag: "AI Products",
     read: "1 yr",
     detail:
-      "Gaplytiq & OrbitHyre — LLM features, AI agents, hybrid matching, proctoring, and frontend delivery.",
+      "Built AI-powered product features with LLMs, agents, and frontend delivery across client applications.",
     img: "photo-1677442136019-21780ecad995",
     alt: "Abstract visualization suggesting artificial intelligence",
   },
   {
-    date: "Mar – Jun 2024",
-    title: "Research Intern · IIIT-Naya Raipur",
+    date: "Mar to Jun 2024",
+    title: "Research Intern at IIIT-Naya Raipur",
     tag: "Research",
     read: "Spark",
     detail:
@@ -45,13 +45,13 @@ const ENTRIES = [
     alt: "Server racks representing big data infrastructure",
   },
   {
-    date: "2021 – 2025",
-    title: "B.Tech (Hons.) Data Science · CSVTU",
+    date: "2021 to 2025",
+    title: "B.Tech (Hons.) Data Science at CSVTU",
     tag: "Education",
     read: "8.14 CGPA",
     detail:
-      "AI, ML, NLP, big data, cloud, and software engineering — foundation for building AI products.",
-    img: "photo-1456513080080-67b6c8b1c8f6",
+      "AI, ML, NLP, big data, cloud, and software engineering as a foundation for building AI products.",
+    img: "photo-1481627834876-b7833e8f5570",
     alt: "Open books and study materials on a desk",
   },
 ];
@@ -77,7 +77,9 @@ export function Experience() {
             </Reveal>
           </div>
           <Reveal delay={0.16} className="journal__intro">
-            <p>From Spark research to leading AI product teams — and shipping freelance-ready work.</p>
+            <p>
+              From research into AI product teams, and shipping freelance-ready work.
+            </p>
             <Squiggle className="journal__squig" />
           </Reveal>
         </header>

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { OctagonMask } from "./OctagonMask";
-import { Mascot, Sparkle } from "./Stickers";
+import { Mascot } from "./Stickers";
 import { LOAD_DELAY, POP } from "@/lib/motion";
 import { SITE } from "@/lib/site";
 
@@ -53,15 +53,14 @@ export function IntroCard() {
           </div>
         </div>
         <p className="intro__bio">
-          Hi, I&apos;m <strong>{SITE.person}</strong>. AI/ML engineer and team leader —
-          I ship LLM apps, RAG systems, and AI agents that solve real business problems.
-          Also open for web &amp; app builds.
+          Hi, I&apos;m <strong>{SITE.person}</strong>. AI/ML engineer and team leader.
+          I ship LLM apps, RAG systems, and AI agents, and I also take custom web and
+          app development projects.
         </p>
         <p className="intro__status label">
           <span className="intro__dot" aria-hidden="true" />
           {SITE.availability}
         </p>
-        <Sparkle className="intro__sparkle" fill="var(--pink)" />
       </motion.div>
     </motion.aside>
   );

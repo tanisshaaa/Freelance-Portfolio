@@ -9,15 +9,18 @@ import {
 } from "framer-motion";
 import { AsterFlower } from "./Stickers";
 import { EASE, LOAD_DELAY } from "@/lib/motion";
-import { SITE, mailto } from "@/lib/site";
+import { useContact } from "./ContactModal";
+import { SITE } from "@/lib/site";
 
 const LINKS = [
+  { href: "#services", label: "Services" },
   { href: "#work", label: "Work" },
   { href: "#nutshell", label: "About" },
   { href: "#experience", label: "Experience" },
 ];
 
 export function Nav() {
+  const { openContact } = useContact();
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [solid, setSolid] = useState(false);
@@ -60,9 +63,13 @@ export function Nav() {
         </nav>
 
         <div className="nav__actions">
-          <a className="btn btn--sm" href={mailto("Freelance AI project enquiry")}>
-            Hire me <span aria-hidden="true">✦</span>
-          </a>
+          <button
+            type="button"
+            className="btn btn--sm"
+            onClick={() => openContact("Hire me, freelance enquiry")}
+          >
+            Hire me
+          </button>
           <button
             type="button"
             className="nav__burger"

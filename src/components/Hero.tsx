@@ -11,9 +11,10 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import { IntroCard } from "./IntroCard";
-import { AsterFlower, Asterisk, Burst, Sparkle, Squiggle } from "./Stickers";
+import { useContact } from "./ContactModal";
+import { AsterFlower, Asterisk, Burst, Squiggle } from "./Stickers";
 import { EASE, LOAD_DELAY, POP } from "@/lib/motion";
-import { SITE, mailto } from "@/lib/site";
+import { SITE } from "@/lib/site";
 
 const LETTERS = SITE.brand.split("");
 
@@ -40,6 +41,7 @@ function Parallax({
 }
 
 export function Hero() {
+  const { openContact } = useContact();
   const ref = useRef<HTMLElement>(null);
   const mx = useSpring(useMotionValue(0), { stiffness: 70, damping: 16 });
   const my = useSpring(useMotionValue(0), { stiffness: 70, damping: 16 });
@@ -70,17 +72,50 @@ export function Hero() {
           <AsterFlower />
         </motion.div>
       </Parallax>
-      <Parallax mx={mx} my={my} depth={40} className="hero__sticker hero__sticker--sparkle">
-        <motion.div
-          animate={{ scale: [1, 1.25, 1], rotate: [0, 20, 0] }}
-          transition={{ duration: 3.4, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <Sparkle fill="var(--butter)" />
-        </motion.div>
-      </Parallax>
       <Parallax mx={mx} my={my} depth={-30} className="hero__sticker hero__sticker--squig">
         <Squiggle />
       </Parallax>
+
+      {/* Fills the empty pocket under the flower */}
+      <motion.div
+        className="hero__cluster"
+        aria-hidden="true"
+        initial={{ opacity: 0, y: 24, rotate: -6 }}
+        animate={{ opacity: 1, y: 0, rotate: -4 }}
+        transition={{ ...POP, delay: LOAD_DELAY + 0.9 }}
+      >
+        <Squiggle className="hero__cluster-squig" />
+        <motion.div
+          className="hero__cluster-stack"
+          animate={{ y: [0, -6, 0] }}
+          transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <span className="hero__chip label">LLMs</span>
+          <span className="hero__chip hero__chip--butter label">RAG</span>
+          <span className="hero__chip hero__chip--cream label">Agents</span>
+        </motion.div>
+      </motion.div>
+
+      {/* Badge lives in the hero, not on the word, so it never covers letters or CTAs */}
+      <motion.div
+        className="hero__burst"
+        aria-hidden="true"
+        initial={{ opacity: 0, scale: 0.4, rotate: -20 }}
+        animate={{ opacity: 1, scale: 1, rotate: -10 }}
+        transition={{ ...POP, delay: LOAD_DELAY + 0.85 }}
+      >
+        <motion.div
+          animate={{ rotate: [-10, 2, -10], scale: [1, 1.05, 1] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <Burst />
+          <span className="hero__burst-text label">
+            Open for
+            <br />
+            projects
+          </span>
+        </motion.div>
+      </motion.div>
 
       <div className="wrap hero__inner">
         <motion.p
@@ -90,7 +125,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: LOAD_DELAY + 0.1, ease: EASE }}
         >
           <Asterisk className="hero__kicker-star" />
-          AI/ML Engineer · LLMs, RAG &amp; Agents
+          AI/ML Engineer | LLMs, RAG &amp; Agents
         </motion.p>
 
         <motion.div className="hero__wordwrap" style={{ y: wordY, rotate: wordRotate }}>
@@ -114,42 +149,6 @@ export function Hero() {
               </motion.span>
             ))}
           </h1>
-
-          <motion.div
-            className="hero__burst"
-            aria-hidden="true"
-            initial={{ opacity: 0, scale: 0.4, rotate: -20 }}
-            animate={{ opacity: 1, scale: 1, rotate: -8 }}
-            transition={{ ...POP, delay: LOAD_DELAY + 0.85 }}
-          >
-            <motion.div
-              animate={{ rotate: [-8, 4, -8], scale: [1, 1.05, 1] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <Burst />
-              <span className="hero__burst-text label">
-                Open for
-                <br />
-                projects
-              </span>
-            </motion.div>
-          </motion.div>
-
-          <motion.span
-            className="hero__tm"
-            initial={{ scale: 0, rotate: -90 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ ...POP, delay: LOAD_DELAY + 0.8 }}
-            aria-hidden="true"
-          >
-            <motion.span
-              animate={{ rotate: 360 }}
-              transition={{ duration: 9, repeat: Infinity, ease: "linear" }}
-              style={{ display: "inline-flex" }}
-            >
-              <Asterisk className="hero__tm-star" />
-            </motion.span>
-          </motion.span>
         </motion.div>
 
         <div className="hero__foot">
@@ -159,8 +158,8 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: LOAD_DELAY + 0.6, ease: EASE }}
           >
-            I build AI-powered products, intelligent automation, and full-stack apps —
-            open to freelance work in AI, web, and software.
+            I build AI-powered products and take on custom web &amp; app development,
+            open to freelance projects end to end.
           </motion.p>
           <motion.div
             className="hero__cta"
@@ -171,9 +170,13 @@ export function Hero() {
             <a className="btn" href="#work">
               See the work <span aria-hidden="true">↓</span>
             </a>
-            <a className="btn btn--ghost" href={mailto("Freelance AI project enquiry")}>
+            <button
+              type="button"
+              className="btn btn--ghost"
+              onClick={() => openContact("Start a project, freelance enquiry")}
+            >
               Start a project
-            </a>
+            </button>
           </motion.div>
         </div>
       </div>

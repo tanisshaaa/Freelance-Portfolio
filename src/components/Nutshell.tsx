@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 import { Marquee } from "./Marquee";
 import { OctagonMask } from "./OctagonMask";
 import { Reveal } from "./Reveal";
-import { AsterFlower, Burst, Mascot, Sparkle } from "./Stickers";
-import { SITE, mailto } from "@/lib/site";
+import { useContact } from "./ContactModal";
+import { AsterFlower, Burst, Mascot } from "./Stickers";
+import { SITE } from "@/lib/site";
 
 const MARKS = [
   <span key="1" className="mark mark--caps">
     LLMs
   </span>,
   <span key="2" className="mark mark--serif">
-    <Sparkle className="mark__glyph" fill="var(--butter)" />
     RAG
   </span>,
   <span key="3" className="mark mark--caps">
@@ -43,13 +43,15 @@ const MARKS = [
 ];
 
 const SERVICES = [
-  "LLM apps & RAG",
+  "AI-powered apps",
   "AI agents & automation",
-  "ML products",
-  "Web & app development",
+  "Custom software",
+  "Data & BI",
 ];
 
 export function Nutshell() {
+  const { openContact } = useContact();
+
   return (
     <section id="nutshell" className="section nutshell">
       <div className="wrap">
@@ -77,14 +79,6 @@ export function Nutshell() {
               <span className="label">AI</span>
             </motion.div>
             <motion.div
-              className="nutshell__sticker nutshell__sticker--b"
-              animate={{ y: [0, 12, 0], rotate: [0, 25, 0] }}
-              transition={{ duration: 5.4, repeat: Infinity, ease: "easeInOut" }}
-              aria-hidden="true"
-            >
-              <Sparkle fill="var(--butter)" />
-            </motion.div>
-            <motion.div
               className="nutshell__sticker nutshell__sticker--c"
               animate={{ rotate: 360 }}
               transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
@@ -100,13 +94,13 @@ export function Nutshell() {
               Part engineer, part team lead, <em>full-time</em> builder of useful AI.
             </h2>
             <p>
-              I&apos;m {SITE.person.split(" ")[0]}, Team Leader at 4th Orbit (Bengaluru /
-              remote). I previously shipped AI for education and recruitment — interview
-              practice, resume tools, candidate matching, and evaluation workflows.
+              I&apos;m {SITE.person.split(" ")[0]}, Team Leader at 4th Orbit. I ship
+              practical AI products: LLM apps, RAG systems, agents, and full-stack
+              interfaces that teams can actually use.
             </p>
             <p>
-              B.Tech (Hons.) in Data Science · research internship at IIIT-Naya Raipur on
-              Apache Spark schedulers. Happy to take freelance AI projects, plus web and
+              B.Tech (Hons.) in Data Science, with a research internship at IIIT-Naya Raipur
+              on Apache Spark schedulers. Available for freelance AI work and custom web or
               app development.
             </p>
             <ul className="chips">
@@ -122,9 +116,13 @@ export function Nutshell() {
               ))}
             </ul>
             <div className="nutshell__cta">
-              <a className="btn btn--cream" href={mailto("Let's build with AI")}>
-                Let&apos;s build with AI <span aria-hidden="true">✦</span>
-              </a>
+              <button
+                type="button"
+                className="btn btn--cream"
+                onClick={() => openContact("Let's build with AI")}
+              >
+                Let&apos;s build with AI
+              </button>
             </div>
           </div>
         </Reveal>

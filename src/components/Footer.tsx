@@ -10,9 +10,9 @@ const WORD = SITE.brand.split("");
 
 const SAYINGS = [
   "Open to freelance AI projects",
-  "LLMs · RAG · Agents",
-  "Also web & app builds",
-  "Say hi — I reply fast",
+  "LLMs, RAG, Agents",
+  "Custom web & app development",
+  "Say hi, I reply fast",
 ];
 
 export function Footer() {
@@ -46,7 +46,7 @@ export function Footer() {
           <Reveal delay={0.1} className="footer__insta">
             <a className="btn btn--cream" href={SITE.github} target="_blank" rel="noreferrer">
               <AsterFlower className="footer__insta-icon" petals={8} />
-              GitHub · @tanisshaaa
+              GitHub | @tanisshaaa
             </a>
           </Reveal>
 
@@ -80,10 +80,8 @@ export function Footer() {
         </div>
 
         <p className="footer__rights label">
-          <span>
-            © 2026 {SITE.person} · {SITE.location}
-          </span>
-          <span>Built with Next.js ✦ Open to freelance</span>
+          <span>© 2026 {SITE.person}</span>
+          <span>Open to freelance</span>
         </p>
       </div>
     </footer>
