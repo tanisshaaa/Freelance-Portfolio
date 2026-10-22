@@ -30,7 +30,7 @@ const PROJECTS: Project[] = [
     tags: ["LLMs", "RAG", "React", "Python"],
     art: <RetailGPTArt />,
     place: "a",
-    href: "https://github.com/tanisshaaa/RetailGPT",
+    href: "https://retail-gpt.vercel.app/",
   },
   {
     slug: "predictive-maintenance",
