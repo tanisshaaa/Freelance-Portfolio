@@ -158,8 +158,8 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: LOAD_DELAY + 0.6, ease: EASE }}
           >
-            I build AI-powered products and take on custom web &amp; app development,
-            open to freelance projects end to end.
+            I build AI powered products and take on custom web and app development,
+            open to freelance projects from idea through delivery.
           </motion.p>
           <motion.div
             className="hero__cta"

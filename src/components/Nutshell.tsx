@@ -43,7 +43,7 @@ const MARKS = [
 ];
 
 const SERVICES = [
-  "AI-powered apps",
+  "AI powered apps",
   "AI agents & automation",
   "Custom software",
   "Data & BI",
@@ -91,15 +91,15 @@ export function Nutshell() {
           <div className="nutshell__copy">
             <p className="label eyebrow eyebrow--ink">In a nutshell</p>
             <h2 className="display nutshell__title">
-              Part engineer, part team lead, <em>full-time</em> builder of useful AI.
+              Part engineer, part team lead, <em>full time</em> builder of useful AI.
             </h2>
             <p>
               I&apos;m {SITE.person.split(" ")[0]}, Team Leader at 4th Orbit. I ship
-              practical AI products: LLM apps, RAG systems, agents, and full-stack
+              practical AI products: LLM apps, RAG systems, agents, and full stack
               interfaces that teams can actually use.
             </p>
             <p>
-              B.Tech (Hons.) in Data Science, with a research internship at IIIT-Naya Raipur
+              B.Tech (Hons.) in Data Science, with a research internship at IIIT Naya Raipur
               on Apache Spark schedulers. Available for freelance AI work and custom web or
               app development.
             </p>

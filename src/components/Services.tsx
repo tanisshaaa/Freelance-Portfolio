@@ -7,10 +7,10 @@ import { EASE } from "@/lib/motion";
 const SERVICES = [
   {
     num: "01",
-    title: "AI-Powered Applications",
+    title: "AI Powered Applications",
     items: [
       "Integrating LLMs and OpenAI APIs",
-      "Building AI chatbots and document-based question-answering systems",
+      "Building AI chatbots and document based question answering systems",
       "Adding AI features to existing applications",
     ],
   },
@@ -19,7 +19,7 @@ const SERVICES = [
     title: "AI Agents & Workflow Automation",
     items: [
       "Automating repetitive business workflows",
-      "Building AI-powered assistants for specific tasks",
+      "Building AI powered assistants for specific tasks",
       "Connecting APIs and applications to reduce manual work",
     ],
   },
@@ -37,8 +37,8 @@ const SERVICES = [
     title: "Data Analytics & Business Intelligence",
     items: [
       "Building interactive dashboards",
-      "Creating data-analysis applications",
-      "Implementing forecasting and anomaly-detection features",
+      "Creating data analysis applications",
+      "Implementing forecasting and anomaly detection features",
     ],
   },
 ];

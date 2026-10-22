@@ -28,7 +28,7 @@ const body = Bricolage_Grotesque({
 export const metadata: Metadata = {
   title: "Tanisha | Freelance Portfolio",
   description:
-    "Freelance AI/ML engineer and team leader. AI-powered apps, agents, custom software, and data analytics.",
+    "Freelance AI/ML engineer and team leader. AI powered apps, agents, custom software, and data analytics.",
   openGraph: {
     title: "Tanisha | Freelance Portfolio",
     description:

@@ -1310,10 +1310,10 @@ p {
   opacity: 1;
 }
 .work__blurb {
-  max-width: 42ch;
+  max-width: 52ch;
   margin: 0.85rem 0 0;
-  font-size: 1.02rem;
-  line-height: 1.5;
+  font-size: 0.98rem;
+  line-height: 1.55;
   letter-spacing: 0;
   word-spacing: normal;
 }

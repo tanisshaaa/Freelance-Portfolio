@@ -11,7 +11,7 @@ const WORD = SITE.brand.split("");
 const SAYINGS = [
   "Open to freelance AI projects",
   "LLMs, RAG, Agents",
-  "Custom web & app development",
+  "Custom web and app development",
   "Say hi, I reply fast",
 ];
 

@@ -25,7 +25,7 @@ const PROJECTS: Project[] = [
     kind: "AI × BI",
     title: "RetailGPT",
     blurb:
-      "Autonomous AI business analyst for D2C and retail — reads Shopify and Stripe data to catch anomalies, forecast demand, auto-pilot stock reordering, and flag payment-gateway exploits.",
+      "An AI business intelligence platform I built for D2C and retail teams. It pulls Shopify and Stripe data, runs continuous anomaly detection on sales and ops signals, forecasts demand with XGBoost so inventory can be planned ahead, automates stock reordering to help prevent stock outs, and watches payment logs for suspicious patterns that look like gateway exploits. Under the hood: React and Node.js on the product side, Python with OpenAI, Isolation Forest, ChromaDB, Sentence Transformers, Supabase, SQLite, and Recharts for the AI and analytics layer.",
     year: "2026",
     tags: ["OpenAI", "XGBoost", "React", "Python"],
     art: <RetailGPTArt />,
@@ -37,7 +37,7 @@ const PROJECTS: Project[] = [
     kind: "ML App",
     title: "Predictive Maintenance",
     blurb:
-      "Streamlit app that predicts industrial machinery failures from sensor data so teams can act before downtime hits.",
+      "A Streamlit machine learning app I built to predict industrial machinery failures before they cause downtime. It takes sensor readings from the shop floor, trains and serves models that flag which machines are likely to fail, and surfaces clear risk signals so maintenance teams can schedule repairs early instead of reacting after a breakdown.",
     year: "2025",
     tags: ["Scikit-learn", "Streamlit", "ML"],
     art: <MaintenanceArt />,
@@ -128,7 +128,7 @@ export function WorkGrid() {
               <p className="display work__note-title">Want something custom?</p>
               <p>
                 Freelance AI builds (LLMs, RAG, agents) plus custom web and app development.
-                Tell me what you need and I&apos;ll shape the delivery.
+                Tell me what you need and I will shape the delivery.
               </p>
             </div>
             <button

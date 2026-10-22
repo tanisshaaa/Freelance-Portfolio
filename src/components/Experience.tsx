@@ -30,13 +30,13 @@ const ENTRIES = [
     tag: "AI Products",
     read: "1 yr",
     detail:
-      "Built AI-powered product features with LLMs, agents, and frontend delivery across client applications.",
+      "Built AI powered product features with LLMs, agents, and frontend delivery across client applications.",
     img: "photo-1677442136019-21780ecad995",
     alt: "Abstract visualization suggesting artificial intelligence",
   },
   {
     date: "Mar to Jun 2024",
-    title: "Research Intern at IIIT-Naya Raipur",
+    title: "Research Intern at IIIT Naya Raipur",
     tag: "Research",
     read: "Spark",
     detail:
@@ -78,7 +78,7 @@ export function Experience() {
           </div>
           <Reveal delay={0.16} className="journal__intro">
             <p>
-              From research into AI product teams, and shipping freelance-ready work.
+              From research into AI product teams, and shipping work ready for freelance clients.
             </p>
             <Squiggle className="journal__squig" />
           </Reveal>
