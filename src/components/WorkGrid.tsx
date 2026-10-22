@@ -22,12 +22,12 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     slug: "retail-gpt",
-    kind: "Featured",
+    kind: "AI × BI",
     title: "RetailGPT",
     blurb:
-      "Full-stack BI platform with Text-to-SQL over 50K retail rows, XGBoost demand forecasting, Isolation Forest anomalies, and a ChromaDB RAG layer for policy-aware chat.",
+      "Autonomous AI business analyst for D2C and retail — reads Shopify and Stripe data to catch anomalies, forecast demand, auto-pilot stock reordering, and flag payment-gateway exploits.",
     year: "2026",
-    tags: ["LLMs", "RAG", "React", "Python"],
+    tags: ["OpenAI", "XGBoost", "React", "Python"],
     art: <RetailGPTArt />,
     place: "a",
     href: "https://retail-gpt.vercel.app/",
