@@ -123,7 +123,7 @@ export function WorkGrid() {
             <ProjectCard key={p.slug} p={p} index={i} />
           ))}
 
-          <Reveal className="work__note" delay={0.1} rotate={-1}>
+          <Reveal className="work__note" delay={0.1} rotate={-0.4}>
             <div className="work__note-copy">
               <p className="display work__note-title">Want something custom?</p>
               <p>
